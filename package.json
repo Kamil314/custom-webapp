@@ -5,7 +5,7 @@
     "type": "git",
     "url": ""
   },
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "start": "webpack-dev-server --open"
   },
