@@ -2,7 +2,8 @@ import React from 'react';
 
 import { userService } from '@/_services';
 import { configureFakeBackend, Role } from '../_helpers';
-import { usersArray } from '../_helpers/array';
+import { usersArray } from '../_helpers/usersArray';
+import { users } from '../_helpers/fake-backend';
 
 class AdminPage extends React.Component {
     
@@ -19,12 +20,10 @@ class AdminPage extends React.Component {
   
     componentDidMount() {
         userService.getAll().then(users => this.setState({ users }));
-         //this.setState({ list: usersArray });
 
     }
 
     add () {
-    
         const addedList = [];
         const workers = ['Kamil', 'Sebas', 'Wieslaw', 'Andrej', 'Angela']
         let userName = document.getElementById('worker').value
@@ -45,7 +44,7 @@ class AdminPage extends React.Component {
     
         const workers = ['Kamil', 'Sebas', 'Wieslaw', 'Andrej', 'Angela']
         let userName = document.getElementById('worker').value
-  
+
         if(workers.indexOf(userName) !== -1){
             alert('Wil je '+ userName + ' zeker verwijderen?')
         } else{
@@ -57,8 +56,6 @@ class AdminPage extends React.Component {
 
     render() {
         const { users } = this.state;
-
-     
         return (
             <div>
                 <h1>Manager Panel</h1>
@@ -73,9 +70,6 @@ class AdminPage extends React.Component {
                         </ul>
                         
                     }
-
-                   
-
                 </div>
                <h1>Medewerker toevoegen/verwijderen</h1>
                <input id='worker' placeholder={"Naam medewerker"}></input>

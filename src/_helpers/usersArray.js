@@ -1,7 +1,7 @@
-import { Role } from './'
+import { Role } from '.'
 
 
-export const usersArray = [
+export let usersArray = [
     { id: 1, username: 'rob', password: 'rob', firstName: 'Rob', adres: 'PrettyViewStr', city: 'Den Haag', country: 'Nederland', loanType: 'Type: Hypotheek 300', restLoan: 'Rest schuld: 341.312,-', rente: "Rente: 1,21%", woz: 'WOZ: 500.000,-', role: Role.Consument },
     { id: 1, username: 'john', password: 'john', firstName: 'John', adres: 'UglyViewStr', city: 'Amsterdam', country: 'Nederland', loanType: 'Type: Hypotheek 122', restLoan: 'Rest schuld: 221.312,-', rente: "Rente: 2,21%", woz: 'WOZ: 400.000,-', role: Role.Consument },
     { id: 1, username: 'angel', password: 'angel', firstName: 'Angel', adres: 'UrStr', city: 'Rotterdam', country: 'Nederland', loanType: 'Type: Hypotheek 0122', restLoan: 'Rest schuld: 920.312,-', rente: "Rente: 1,11%", woz: 'WOZ: 700.000,-', role: Role.Consument },
